@@ -2,10 +2,10 @@ function Rank(){
     return(
         <div >
             <p  className="f3 white mb0">
-                {`Prince, you are ranked`}
+                {`Hello there, you are ranked among the top`}
             </p>
             <p className="f1 white mv1">
-                #{5}
+                #{10}
             </p>
         </div>
     )
