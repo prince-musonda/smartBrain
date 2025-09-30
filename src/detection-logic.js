@@ -8,10 +8,10 @@ import displayBoundingBoxes from "./displayBoxes";
     //////////////////////////////////////////////////////////////////////////////////////////////////
 
     // Your PAT (Personal Access Token) can be found in the portal under Authentification
-    const PAT = '70ea81a81948435398448bdd96c51a1d';
+    const PAT = '4bf6798997744c14945ad525318f46fc';
     // Specify the correct user_id/app_id pairings
     // Since you're making inferences outside your app's scope
-    const USER_ID = 'clarifai';       
+    const USER_ID = 'prince-musonda';       
     const APP_ID = 'main';
     // Change these to whatever model and image URL you want to use
     const MODEL_ID = 'face-detection';
@@ -51,7 +51,7 @@ import displayBoundingBoxes from "./displayBoxes";
     // https://api.clarifai.com/v2/models/{YOUR_MODEL_ID}/outputs
     // this will default to the latest version_id
     console.log('fetching ...')
-    const response = await fetch("https://api.clarifai.com/v2/models/" + MODEL_ID + "/versions/" + MODEL_VERSION_ID + "/outputs", requestOptions)
+    const response = await fetch("api.clarifai.com/v2/users/clarifai/apps/main/models/face-detection/versions/6dc7e46bc9124c5c8824be4822abe105/outputs", requestOptions)
     const data = await response.json()
     const faceLocationsArray =  calculateFaceLocation(data)
     console.log(faceLocationsArray)
